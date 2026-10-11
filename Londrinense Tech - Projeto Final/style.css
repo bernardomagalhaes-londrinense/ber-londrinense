@@ -56,3 +56,15 @@ ul{
 .cards{
     display: flex;
 }
+    .card{
+    border-style: solid;
+    display: inline-block;
+    border-radius: 15px;
+    max-width: 250px;
+    margin-right: 25px;
+    padding: 10px;
+}
+.link-js{
+    text-decoration: none;
+    color: rgb(208, 208, 25);
+}
