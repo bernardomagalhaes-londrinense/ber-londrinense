@@ -1,74 +1,146 @@
-/* Remove o margin e o padding e adiciona o border-box */
-*{
+/* Remove o margin e o padding e adiciona o box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@media (max-width: 767px){
-    .wrapper{
-        display: grid;
-    }
+@font-face {
+    font-family: 'Rubik';
+    src: url(Fonts/Rubik/Rubik-VariableFont_wght.ttf);
 }
-img{
+@font-face {
+    font-family: 'Noto-sans';
+    src: url(Fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+img {
     max-width: 100px;
+    height: auto;
 }
-.cabecalho{
+h1{
+    font-family: 'Rubik';
+}
+h2{
+    font-family: 'Rubik';
+}
+h5{
+    font-family: 'Noto-sans';
+}
+p{
+    font-family: 'Noto-sans';
+}
+
+.cabecalho {
     background-color: #f7f0f0;
     height: 75px;
-}
-.barra-lateral{
-    background-color: #f7f0f0;
-    min-width: 200px;
-    padding: 16px;
-}
-.principal{
-    padding: 16px;
-    flex: 1;
-}
-.rodape{
-    padding: 16px;
-}
-/* Adiciona o flex ao site */
-.wrapper{
     display: flex;
-    height: calc(100vh - 75px);
+    align-items: center;
+    padding-left: 16px;
 }
-.conteudo{
+
+/* Estrutura padrão para Celular (Mobile First) */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 75px);
+}
+
+.barra-lateral {
+    background-color: #f7f0f0;
+    width: 100%;
+    padding: 16px;
+}
+
+.conteudo {
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
 }
-.bernardinho-joga{
+
+.principal {
+    padding: 16px;
+    flex: 1;
+}
+
+.rodape {
+    padding: 16px;
+    background-color: #f7f0f0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bernardinho-joga {
     color: #9003f2;
     text-decoration: none;
 }
-.bernardinho-joga span{
+
+.bernardinho-joga span {
     color: #ffe500;
 }
-ul{
+
+ul {
     margin-left: 20px;
 }
-.link-navegacao{
+
+.link-navegacao {
     text-decoration: none;
     color: black;
-}
-.cards{
-    display: flex;
-}
-.card{
-    border-style: solid;
     display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Grid de Cards Responsivo */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.card {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ccc;
     border-radius: 15px;
-    max-width: 250px;
-    margin-right: 25px;
-    padding: 10px;
+    padding: 15px;
+    width: 100%;
 }
-.link-js{
+
+.card h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.link-js {
     text-decoration: none;
-    color: rgb(208, 208, 25);
+    color: rgb(180, 180, 0);
 }
-.link-html{
+
+.link-html {
     color: orange;
     text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+        height: calc(100vh - 75px);
+    }
+
+    .barra-lateral {
+        width: 220px;
+        min-width: 220px;
+        height: 100%;
+    }
+
+    .conteudo {
+        overflow-y: auto;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px){
+    .cards{
+        display: flex
+    }
 }
