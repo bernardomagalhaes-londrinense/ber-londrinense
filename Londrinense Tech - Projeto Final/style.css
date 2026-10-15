@@ -22,13 +22,31 @@ h1{
 h2{
     font-family: 'Rubik';
 }
+h4{
+    font-family: 'Noto-sans';
+}
 h5{
     font-family: 'Noto-sans';
 }
 p{
     font-family: 'Noto-sans';
 }
-
+li{
+    font-family: 'Noto-sans';
+}
+a{
+    font-family: 'Noto-sans';
+}
+.pergunta{
+    font-family: 'Rubik';
+}
+.entrada{
+    font-family: 'Noto-sans';
+}
+.confirma{
+    color: green;
+    font-family: 'Rubik';
+}
 .cabecalho {
     background-color: #f7f0f0;
     height: 75px;
